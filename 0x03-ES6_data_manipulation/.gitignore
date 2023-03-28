@@ -1,0 +1,10 @@
+# Ignore node modules directory
+node_modules/
+
+# ignore all main file
+*main*
+
+.eslintrc.js
+babel.config.js
+package.json
+package-lock.json
