@@ -1,4 +1,3 @@
-// Reading   a file asynchronously with Node JS
 const fs = require('fs');
 
 function countStudents(path) {
@@ -24,13 +23,13 @@ function countStudents(path) {
         });
         console.log(
           `Number of students in CS: ${CSname.length}. List: ${CSname.join(
-            ', '
-          )}`
+            ', ',
+          )}`,
         );
         console.log(
           `Number of students in SWE: ${SWEname.length}. List: ${SWEname.join(
-            ', '
-          )}`
+            ', ',
+          )}`,
         );
         resolve();
       }

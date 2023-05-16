@@ -33,12 +33,12 @@ function countStudents(path) {
     });
 
     console.log(
-      `Number of students in CS: ${CSname.length}. List: ${CSname.join(', ')}`
+      `Number of students in CS: ${CSname.length}. List: ${CSname.join(', ')}`,
     );
     console.log(
       `Number of students in SWE: ${SWEname.length}. List: ${SWEname.join(
-        ', '
-      )}`
+        ', ',
+      )}`,
     );
   } catch (err) {
     throw Error('Cannot load the database');
