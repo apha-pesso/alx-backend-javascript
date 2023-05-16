@@ -45,7 +45,6 @@ function countStudents(path) {
   }
 
   //   console.log(CSname);
-  //   console.log(SWEname);
 }
 
 module.exports = countStudents;
