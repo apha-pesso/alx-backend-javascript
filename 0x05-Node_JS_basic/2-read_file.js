@@ -1,7 +1,7 @@
 // Reading a file synchronously
 const fs = require('fs');
 
-function countStudents(path) {
+function countStudents (path) {
   //   fs.readFile(path, (err, data) => {
   //     if (err) {
   //       throw new Error("Cannot load the database");
@@ -10,9 +10,10 @@ function countStudents(path) {
   //     console.log(data.toString());
   //   });
   const data = fs.readFileSync(path);
-  if (!data) {
-    throw new Error('Cannot load the database');
-  }
+  // if (!data) {
+    // throw Error('Cannot load the database');
+  // }
+	if (data){
   // console.log(data.toString());
   nameList = data
     .toString()
@@ -39,6 +40,9 @@ function countStudents(path) {
   console.log(
     `Number of students in SWE: ${SWEname.length}. List: ${SWEname.join(', ')}`
   );
+	}else {
+		throw Error('Cannot load the database');
+	}
   //   console.log(CSname);
   //   console.log(SWEname);
 }
