@@ -1,5 +1,5 @@
 // Reading a file synchronously
-const fs = require("fs");
+const fs = require('fs');
 
 function countStudents(path) {
   //   fs.readFile(path, (err, data) => {
@@ -11,33 +11,33 @@ function countStudents(path) {
   //   });
   const data = fs.readFileSync(path);
   if (!data) {
-    throw new Error("Cannot load the database");
+    throw new Error('Cannot load the database');
   }
-  console.log(data.toString());
-  name_list = data
+  // console.log(data.toString());
+  nameList = data
     .toString()
-    .split("\n")
+    .split('\n')
     .filter((name) => name.length > 0);
-  console.log(name_list);
-  const students = name_list.length - 1;
+  // console.log(name_list);
+  const students = nameList.length - 1;
   console.log(`Number of students: ${students}`);
 
   const CSname = [];
   const SWEname = [];
 
-  name_list.forEach((element) => {
-    if (element.includes("CS")) {
-      CSname.push(element.split(",")[0]);
-    } else if (element.includes("SWE")) {
-      SWEname.push(element.split(",")[0]);
+  nameList.forEach((element) => {
+    if (element.includes('CS')) {
+      CSname.push(element.split(',')[0]);
+    } else if (element.includes('SWE')) {
+      SWEname.push(element.split(',')[0]);
     }
   });
 
   console.log(
-    `Number of students in CS: ${CSname.length}. List: ${CSname.join(", ")}`
+    `Number of students in CS: ${CSname.length}. List: ${CSname.join(', ')}`
   );
   console.log(
-    `Number of students in SWE: ${SWEname.length}. List: ${SWEname.join(", ")}`
+    `Number of students in SWE: ${SWEname.length}. List: ${SWEname.join(', ')}`
   );
   //   console.log(CSname);
   //   console.log(SWEname);
