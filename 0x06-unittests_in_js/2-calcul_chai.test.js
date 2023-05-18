@@ -3,7 +3,6 @@
 const chai = require("chai");
 const expect = chai.expect;
 const calc = require("./1-calcul");
-// const assert = require("assert");
 
 describe("calc", function () {
   it("Should round the variables and return operate on the parameter with type", function () {
