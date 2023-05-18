@@ -2,7 +2,7 @@
 
 const chai = require("chai");
 const expect = chai.expect;
-const calc = require("./2-calcul");
+const calc = require("./2-calcul_chai");
 
 describe("calc", function () {
   it("Should round the variables and return operate on the parameter with type", function () {
